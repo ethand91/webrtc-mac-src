@@ -80,7 +80,7 @@ class RTC_LOCKABLE RTC_EXPORT CriticalSection {
   mutable PlatformThreadRef thread_;  // Only used by RTC_DCHECKs.
   mutable int recursion_count_;       // Only used by RTC_DCHECKs.
 #else  // !defined(WEBRTC_WIN) && !defined(WEBRTC_POSIX)
-#error Unsupported platform.
+//#error Unsupported platform.
 #endif
 };
 

@@ -25,9 +25,9 @@
 #elif defined(WEBRTC_POSIX)
 #include <pthread.h>
 #include <unistd.h>
-#if defined(WEBRTC_MAC)
+//#if defined(WEBRTC_MAC)
 #include <pthread_spis.h>
-#endif
+//#endif
 #endif
 // clang-format on
 
@@ -38,10 +38,11 @@ typedef DWORD PlatformThreadRef;
 #elif defined(WEBRTC_FUCHSIA)
 typedef zx_handle_t PlatformThreadId;
 typedef zx_handle_t PlatformThreadRef;
-#elif defined(WEBRTC_POSIX)
+#endif
+//#elif defined(WEBRTC_POSIX)
 typedef pid_t PlatformThreadId;
 typedef pthread_t PlatformThreadRef;
-#endif
+//#endif
 
 // Retrieve the ID of the current thread.
 PlatformThreadId CurrentThreadId();

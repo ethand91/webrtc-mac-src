@@ -34,7 +34,7 @@ SDK_FRAMEWORK_NAME = 'WebRTC.framework'
 
 DEFAULT_ARCHS = ENABLED_ARCHS = ['arm64', 'arm', 'x64', 'x86']
 IOS_DEPLOYMENT_TARGET = '10.0'
-LIBVPX_BUILD_VP9 = False
+LIBVPX_BUILD_VP9 = True 
 
 sys.path.append(os.path.join(SCRIPT_DIR, '..', 'libs'))
 from generate_licenses import LicenseBuilder

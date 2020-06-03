@@ -19,7 +19,7 @@
 
 #include "rtc_base/system/arch.h"
 
-#if defined(WEBRTC_MAC)
+//#if defined(WEBRTC_MAC)
 #include <libkern/OSByteOrder.h>
 
 #define htobe16(v) OSSwapHostToBigInt16(v)
@@ -36,7 +36,7 @@
 #define le32toh(v) OSSwapLittleToHostInt32(v)
 #define le64toh(v) OSSwapLittleToHostInt64(v)
 
-#elif defined(WEBRTC_WIN) || defined(__native_client__)
+#if defined(WEBRTC_WIN) || defined(__native_client__)
 
 #if defined(WEBRTC_WIN)
 #include <stdlib.h>
@@ -90,8 +90,8 @@
 
 #elif defined(WEBRTC_POSIX)
 #include <endian.h>
-#else
-#error "Missing byte order functions for this arch."
+//#else
+//#error "Missing byte order functions for this arch."
 #endif  // defined(WEBRTC_MAC)
 
 namespace rtc {

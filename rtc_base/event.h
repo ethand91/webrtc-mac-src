@@ -13,10 +13,10 @@
 
 #if defined(WEBRTC_WIN)
 #include <windows.h>
-#elif defined(WEBRTC_POSIX)
+//#elif defined(WEBRTC_POSIX)
 #include <pthread.h>
-#else
-#error "Must define either WEBRTC_WIN or WEBRTC_POSIX."
+//#else
+//#error "Must define either WEBRTC_WIN or WEBRTC_POSIX."
 #endif
 
 namespace rtc {
